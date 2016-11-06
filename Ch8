@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Coins {
+	public static void main(String[] args) {
+		System.out.println("Yo Yo Yo Yo Yo");
+	Scanner input = new Scanner(System.in);
+	
+	// Ask user to input number
+	System.out.print("Please choose a number between 0 and 511: ");
+	int number = input.nextInt();
+	//converting to binary
+	String binary = Integer.toBinaryString(number);
+	binary = binary.format("%09d", Integer.parseInt(binary));
+	// go through each character and convert to heads or tails
+	for (int i = 1; i < 10; i++) {
+		if ('0' == binary.charAt(i-1)) {
+			System.out.print("T");
+		}
+		else {
+			System.out.print("H");
+		}
+		if (i % 3 == 0){
+			System.out.println();
+			}
+		}
+	}
+}
